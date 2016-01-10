@@ -10,7 +10,9 @@ RUN echo deb http://packages.prosody.im/debian stable main >> /etc/apt/sources.l
         lua-dbi-mysql \
         lua-dbi-postgresql \
         lua-dbi-sqlite3 \
-        prosody
+        prosody && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN ln -sf /dev/stdout /var/log/prosody/prosody.log && \
     ln -sf /dev/stderr /var/log/prosody/prosody.err && \
@@ -31,6 +33,7 @@ VOLUME ["/etc/prosody", "/var/lib/prosody"]
 #   5280/tcp: BOSH
 #   5281/tcp: Secure BOSH
 #   5347/tcp: XMPP component
+#
 EXPOSE 5222 5269 5347 5280 5281
 
 USER prosody
