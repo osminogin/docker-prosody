@@ -2,13 +2,14 @@
 
 Docker container for Prosody communication server.
 
-## Setup
+Please star this project on Docker Hub: https://hub.docker.com/r/osminogin/prosody/
 
-### Configuration
+## Getting started
 
 Copy config dir from running container to docker host:
 
 ```bash
+docker run --name prosody osminogin/prosody
 docker cp <container>:/etc/prosody /srv
 ```
 
@@ -22,7 +23,7 @@ Also you must create first user to connect to the server:
 docker exec <container> prosodyctl register <user> <domain> <password>
 ```
 
-## Running
+### Running
 
 ```bash
 docker run -d \
@@ -31,6 +32,8 @@ docker run -d \
    -v /srv/prosody /etc/prosody \
    osminogin/prosody
 ```
+
+## Example
 
 ### Unit file for systemd
 
@@ -57,3 +60,7 @@ ExecStop=/usr/bin/docker stop prosody
 [Install]
 WantedBy=multi-user.target
 ```
+
+## License
+
+MIT
