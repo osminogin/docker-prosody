@@ -10,6 +10,7 @@ RUN echo deb http://packages.prosody.im/debian stable main >> /etc/apt/sources.l
         lua-dbi-mysql \
         lua-dbi-postgresql \
         lua-dbi-sqlite3 \
+        lua-sec \
         prosody && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
