@@ -9,8 +9,8 @@ Please star this project on Docker Hub: https://hub.docker.com/r/osminogin/proso
 Copy config dir from running container to docker host:
 
 ```bash
-docker run --name prosody osminogin/prosody
-docker cp <container>:/etc/prosody /srv
+docker run --rm --name prosody osminogin/prosody
+sudo docker cp <container>:/etc/prosody /srv
 ```
 
 Make the necessary changes and mount it as volume inside the container.
