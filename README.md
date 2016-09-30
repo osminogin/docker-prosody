@@ -1,4 +1,4 @@
-# docker-prosody
+# docker-prosody [![](https://images.microbadger.com/badges/image/osminogin/prosody.svg)](https://microbadger.com/images/osminogin/prosody)
 
 Docker container for Prosody communication server.
 
