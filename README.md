@@ -1,6 +1,6 @@
 # docker-prosody [![](https://images.microbadger.com/badges/image/osminogin/prosody.svg)](https://microbadger.com/images/osminogin/prosody)
 
-Docker container for Prosody communication server.
+Docker container for Prosody IM communication server.
 
 Please star this project on Docker Hub: https://hub.docker.com/r/osminogin/prosody/
 
@@ -39,7 +39,7 @@ docker run -d \
 
 ```
 [Unit]
-Description=Prosody service
+Description=Prosody IM service
 After=docker.service
 Requires=docker.service
 
